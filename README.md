@@ -4,7 +4,7 @@ And this code is my test task for Yurii Luchiv.
 
 To start the server you need:
 the Simplest way(need Docker):
-- downolad code on you PC
+- download code on you PC
 - start script file start_docker_script.bat.
 That's all.
 
