@@ -1,0 +1,16 @@
+version: '3.9'
+
+services:
+ 
+  webserv:
+    build: ./
+    container_name: demo
+    ports:
+      - 8888:8888
+
+  
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:h2:mem:testdb
+      SRING_DATASOURCE_DRIVER-CLASS-NAME: org.h2.Driver
+      SPRING_DATASOURCE_USERNAME: sa
+      SPRING_DATASOURCE_PASSWORD: 

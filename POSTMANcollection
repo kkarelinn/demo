@@ -1,0 +1,221 @@
+{
+	"info": {
+		"_postman_id": "a9084751-9793-420b-b57e-f89ed48d48c8",
+		"name": "test collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21575595"
+	},
+	"item": [
+		{
+			"name": "get JWT token",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTY1NTk1MDc4NywiaWF0IjoxNjU1OTE0Nzg3fQ.OuV3mCJjmfx1lp9P4LtqGsd7UfW9V8fEfzdrqYy-cnQ",
+						"type": "default",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userName\":\"admin\",\r\n    \"password\":\"admin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8888/authenticate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						"authenticate"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": []
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "check available",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTY1NTk1MTAzMSwiaWF0IjoxNjU1OTE1MDMxfQ.CpCmZGvyVFpzskGSdl-tG9zLqSsq7DEexMODjBX7Eds",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8888/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "users over 40 years",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTY1NTk1MTAzMSwiaWF0IjoxNjU1OTE1MDMxfQ.CpCmZGvyVFpzskGSdl-tG9zLqSsq7DEexMODjBX7Eds",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8888/api/usersAge/40",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						"api",
+						"usersAge",
+						"40"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "users with RED articles",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTY1NTk1MTAzMSwiaWF0IjoxNjU1OTE1MDMxfQ.CpCmZGvyVFpzskGSdl-tG9zLqSsq7DEexMODjBX7Eds",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8888/api/usersColor/RED",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						"api",
+						"usersColor",
+						"RED"
+					],
+					"query": [
+						{
+							"key": "Auth",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "distant users NAMES more than 3 art",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "save User",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTY1NTk1MTAzMSwiaWF0IjoxNjU1OTE1MDMxfQ.CpCmZGvyVFpzskGSdl-tG9zLqSsq7DEexMODjBX7Eds",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"name\": \"NewUser\",\r\n        \"age\": 50,\r\n        \"articles\": [\r\n            {\r\n                \"text\": \"test Article\",\r\n                \"color\": \"GREEN\"\r\n            },\r\n            {\r\n                \"text\": \"test Article 2\",\r\n                \"color\": \"BLUE\"\r\n            }\r\n            ]\r\n }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8888/api/saveUser",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						"api",
+						"saveUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "save Article",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTY1NTk1MTAzMSwiaWF0IjoxNjU1OTE1MDMxfQ.CpCmZGvyVFpzskGSdl-tG9zLqSsq7DEexMODjBX7Eds",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n            \"text\": \"NEW Article\",\r\n            \"color\": \"GREEN\",\r\n            \"user\":{\"id\":2}\r\n}\r\n        \r\n            ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8888/api/saveArticle",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						"api",
+						"saveArticle"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
