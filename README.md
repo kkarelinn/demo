@@ -6,7 +6,7 @@ To start the server you need:
 the Simplest way(need Docker):
 - download code on you PC
 - start script file start_docker_script.bat.
-That's all.
+- That's all.
 
 To check server start http://localhost:8888/api
 
